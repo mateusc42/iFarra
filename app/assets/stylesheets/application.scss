@@ -329,8 +329,8 @@ ul.circled li:before {
 hr {
     border: none;
     border-bottom: 1px solid #e1e1e1;
-    padding-bottom: 30px;
-    margin-bottom: 60px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
 }
 blockquote {
     border: none;
@@ -2639,10 +2639,10 @@ figure a .text-overlay .info {
     background-attachment: scroll !important
 }
 .parallax.testimonials {
-    background-image: url(style/images/art/parallax.jpg)
+    background-image: url(/assets/parallax.jpg)
 }
 .parallax.process {
-    background-image: url(style/images/art/parallax.jpg)
+    background-image: url(/assets/parallax.jpg)
 }
 .contact-info {
     margin: 0;

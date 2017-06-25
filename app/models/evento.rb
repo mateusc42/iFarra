@@ -5,7 +5,7 @@ class Evento < ActiveRecord::Base
   has_many :attendees, :through => :invites
   has_many :invites, :foreign_key => :attendee_event_id
   
-  has_attached_file :image, styles: { large: "600x600>", medium: "366x414>", thumb: "152x152#" }, :default_url => "Sem_foto"
+  has_attached_file :image, styles: { large: "600x600>", medium: "366x414>", thumb: "162x162#" }, :default_url => "Sem_foto"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   
   def self.find_by_user_id(current_user_id)
