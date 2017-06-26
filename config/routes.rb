@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'pages#index'
   
   get 'messages' => 'pages#messages'
+  
+  get 'equipe' => 'pages#equipe'
 
   get 'places/search_type' => 'places#search_type'
   

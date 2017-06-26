@@ -2,15 +2,14 @@
 
 <div class="row">
   <div class="col-md-4">
-     <%= link_to 'Dados abertos de Recife', places_search_with_dados_abertos_path, id: 'dados_abertos_recife' %>
      
      <div>
      <%= form_tag '/places/search_with_yelp', :method => 'get' do %>
-             <%= text_field_tag(:search_input) %>
-             <%= submit_tag("Pesquisar") %>
+        <%= text_field_tag(:search_input) %>
+        <%= submit_tag("Pesquisar", :class=>"btn") %>
+        <%= link_to 'Usar Dados abertos de Recife ', places_search_with_dados_abertos_path, id: 'dados_abertos_recife', :class=>"btn btn-gray" %>
+        <%= link_to 'Voltar', eventos_path, :class=>"btn btn-gray"%>
      <%end%>
      </div>
-     
-     <%=link_to 'Cancelar', eventos_path%>
    </div>
 </div>

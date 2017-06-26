@@ -10,9 +10,9 @@ gem 'cancancan'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Servidor HTTP 1.1
 gem 'puma', '~> 3.0'
-# Use sqlite3 as the database for Active Record
+# Use pg for deploy heroku
 gem 'pg'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

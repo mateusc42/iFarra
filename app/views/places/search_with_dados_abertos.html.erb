@@ -1,17 +1,23 @@
-<h1>Resultados dos locais</h1>
+<h1>Resultados dos Locais</h1></br>
 
 <% unless @response.nil? %>
   <% @response['result']['records'].each do |local| %>
+  <div class="post format-standard">
+    <div class="post-content image-caption">
     <div class="field">
-      <h3><%= 'Nome do local: ' + local['nome'] %></h3>
-     <p> <%= 'Endereço do local:' + local['endereco'] %> </p>
-     <p> <%= 'Especialidade: ' + local['especialidade'] %> </p>
-      <%= link_to "#{local['nome']} parece ser um bom lugar", new_evento_path(:nome_local => local['nome'], :endereco_local => local['endereco']), id: local['nome'].gsub(' ', '_') %>
+     <h2 class="post-title"> <%= local['nome'] %> </h2>
+     <p><b>Endereço do Local: </b><%= local['endereco'] %></p>
+     <p><b>Especialidade: </b><%= local['especialidade'] %></p>
+     <%= link_to "#{local['nome']} parece ser um bom lugar", new_evento_path(:nome_local => local['nome'], :endereco_local => local['endereco']), id: local['nome'].gsub(' ', '_'), :class=>"btn" %>
+     <hr />
     </div>
   <%end%>
-  <%= link_to 'pagina anterior', places_search_with_dados_abertos_path(:prev_page => @response['result']['_links']['start']) %>
-  <%= link_to 'proxima pagina', places_search_with_dados_abertos_path(:next_page => @response['result']['_links']['next']) %>
+  <%= link_to 'pagina anterior', places_search_with_dados_abertos_path(:prev_page => @response['result']['_links']['start']), :class=>"btn" %>
+  <%= link_to 'proxima pagina', places_search_with_dados_abertos_path(:next_page => @response['result']['_links']['next']), :class=>"btn"  %>
 <% else %>
   <h3>Nenhum lugar encontrado</h3>
 <%end%>
-<%= link_to 'Procurar outros lugares', places_search_type_path %>
+<%= link_to 'Procurar outros lugares', places_search_type_path, :class=>"btn"  %>
+    </div>
+  </div>
+</div>
