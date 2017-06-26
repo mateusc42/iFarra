@@ -41,7 +41,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
   config.action_cable.url = 'wss://ifarra.herokuapp.com/cable'
-  config.action_cable.allowed_request_origins = [ 'https://ifarra.herokuapp.com', /http:\/\/ifarra.herokuapp.*/ ]
+  config.action_cable.allowed_request_origins = [ 'https://ifarra.herokuapp.com', 'https://ifarra.herokuapp.com' ]
   
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
