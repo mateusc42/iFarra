@@ -10,10 +10,13 @@ gem 'cancancan'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Servidor HTTP 1.1
 gem 'puma', '~> 3.0'
-# Use pg for heroku database.
-gem 'pg'
-# Heroku pre-req
-gem 'rails_12factor', group: :production # don't use locally, only on heroku
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3', group: :development
+# Use pg for deploy heroku
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
