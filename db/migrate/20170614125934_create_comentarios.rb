@@ -3,7 +3,7 @@ class CreateComentarios < ActiveRecord::Migration[5.0]
     create_table :comentarios do |t|
       t.string :user_email
       t.text :body
-      t.references :evento_id, foreign_key: true
+      t.references :evento, foreign_key: true
 
       t.timestamps
     end
