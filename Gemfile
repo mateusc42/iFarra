@@ -11,8 +11,14 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Servidor HTTP 1.1
 gem 'puma', '~> 3.0'
 # Use pg for deploy heroku
-gem 'pg'
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+# Use sqlite for developer
+group :development do
+  gem 'sqlite3'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

@@ -19,3 +19,5 @@ O usuário, através de uma interface intuitiva, informará um local de destino 
 
 ## Justificativa
 O diferencial do iFarra consiste em centralizar informações acerca das opções de lazer presentes na lista de roteiros de turismo e lazer da cidade e também no compartilhamento dessas informações entre usuários, com o intuito de que o encontro seja feito de forma mais simples. Acreditamos que, com as informações centralizadas, os eventos de grupos sociais seriam realizados com mais garantia, pois todos os integrantes poderão dar opiniões sobre o local e confirmar sua presença em um único ambiente disponível para todos que foram convidados. Além de confirmada a sua presença no evento, será possível filtrar a lista de convidados por sexo e solicitar uma conversa privada com outra pessoa confirmada no evento.
+
+> **Nota:** Este projeto tem como maior foco a inserção do frontend (Atualização do layout da aplicação), com isso os testes não funcionam corretamente. Caso deseje o projeto com todos os testes funcinando corretamente, procure pelo repositorio ifarra-tests.
